@@ -1,23 +1,49 @@
 import { Switch, FormControlLabel } from '@mui/material';
-import './vote.css'
+import './vote.css';
+import { useState } from 'react';
 
 export default function VoteForm(){
+
+    const [toggles, setToggles] = useState({
+        singleSelect: false,
+        multipleSelect: false,
+        rating: false,
+        thisOrThat: false,
+        featured: false,
+        displayResult: false,
+        title: false,
+        avatar: false,
+        banner: false,
+        points: false,
+      });
+
+      const handleChange = (event) => {
+        const { name, checked } = event.target;
+        setToggles((prevToggles) => ({
+          ...prevToggles,
+          [name]: checked,
+        }));
+      };
+
+    
     return(
         <>
         <div className='Content'>
 
        
-{/* <p><b>Use this admin panel to create new content in Atari Club</b></p>
+<p style={{paddingTop:"10px"}}><b>Use this admin panel to create new content in Atari Club</b></p>
  <div style={{display:"flex"}}>
     <div style={{display:'flex',justifyContent:"space-between",width:"51%"}}>
       <button className="btn1" ><b>CREATE ACHIEVEMENT</b></button>
-      <button className="btn1" >CREATE VOTE</button>
+      <button className="btn1" style={{backgroundColor:"#E9D200"}} >CREATE VOTE</button>
       <button className="btn1" >CREATE NEWS TITLE</button>
     </div>
 
 
       <button  style={{padding:"10px", borderRadius:"10px",marginLeft:"39%",color:'white',backgroundColor:'black'}}>VIEW ALL</button>
- </div> */}
+ </div> 
+
+ <hr className="hrstyle"  ></hr>
 
  <div style={{backgroundColor:"#F2F3F5"}}>
         <p> <b>Select the vote type (select one)</b></p>
@@ -25,46 +51,93 @@ export default function VoteForm(){
  
         <div style={{display:"flex",flexDirection:"column",backgroundColor:"white",paddingLeft:"2%"}}>
 
-            <FormControlLabel
-            control={
-            <Switch
+           
+        <FormControlLabel
+      control={
+        <Switch
+        checked={toggles.singleSelect}
+          onChange={handleChange}
+           name="singleSelect"
+          sx={{
+            '& .MuiSwitch-switchBase.Mui-checked': {
+              color: '#6717C2',
+              '&:hover': {
+                backgroundColor: 'rgba(128, 0, 128, 0.08)',
+              },
+            },
+            '& .MuiSwitch-switchBase.Mui-checked + .MuiSwitch-track': {
+              backgroundColor: '#6717C2',
+            },
+          }}
+        />
+      }
+      label="Single select"
+    />
+           
+           <FormControlLabel
+      control={
+        <Switch
+        checked={toggles.multipleSelect}
+          onChange={handleChange}
+           name="multipleSelect"
+          sx={{
+            '& .MuiSwitch-switchBase.Mui-checked': {
+              color: '#6717C2',
+              '&:hover': {
+                backgroundColor: 'rgba(128, 0, 128, 0.08)',
+              },
+            },
+            '& .MuiSwitch-switchBase.Mui-checked + .MuiSwitch-track': {
+              backgroundColor: '#6717C2',
+            },
+          }}
+        />
+      }
+      label="Multiple Select"
+    />
+    <FormControlLabel
+control={
+<Switch
+ checked={toggles.rating}
+onChange={handleChange}
+name="rating"
+sx={{
+'& .MuiSwitch-switchBase.Mui-checked': {
+  color: '#6717C2',
+  '&:hover': {
+    backgroundColor: 'rgba(128, 0, 128, 0.08)',
+  },
+},
+'& .MuiSwitch-switchBase.Mui-checked + .MuiSwitch-track': {
+  backgroundColor: '#6717C2',
+},
+}}
+/>
+}
+label="Rating"
+/>
             
-            name="toggle"
-            color="primary"
-            />
-            }
-            label="Single select"
-            />
-            <FormControlLabel
-            control={
-            <Switch
-            
-            name="toggle"
-            color="primary"
-            />
-            }
-            label="Multiple select"
-            />
-             <FormControlLabel
-            control={
-            <Switch
-            
-            name="toggle"
-            color="primary"
-            />
-            }
-            label="Rating"
-            />
-            <FormControlLabel
-            control={
-            <Switch
-            
-            name="toggle"
-            color="primary"
-            />
-            }
-            label="This or that"
-            />
+<FormControlLabel
+      control={
+        <Switch
+        checked={toggles.thisOrThat}
+          onChange={handleChange}
+          name="thisOrThat"
+          sx={{
+            '& .MuiSwitch-switchBase.Mui-checked': {
+              color: '#6717C2',
+              '&:hover': {
+                backgroundColor: 'rgba(128, 0, 128, 0.08)',
+              },
+            },
+            '& .MuiSwitch-switchBase.Mui-checked + .MuiSwitch-track': {
+              backgroundColor: '#6717C2',
+            },
+          }}
+        />
+      }
+      label="This or that"
+    />
         </div>
  </div>
 
@@ -94,26 +167,50 @@ export default function VoteForm(){
  
         <div style={{display:"flex",flexDirection:"column",backgroundColor:"white",paddingLeft:"2%"}}>
 
-            <FormControlLabel
-            control={
-            <Switch
             
-            name="toggle"
-            color="primary"
-            />
-            }
-            label="Featured"
-            />
-            <FormControlLabel
-            control={
-            <Switch
+        <FormControlLabel
+      control={
+        <Switch
+        checked={toggles.featured}
+          onChange={handleChange}
+          name="featured"
+          sx={{
+            '& .MuiSwitch-switchBase.Mui-checked': {
+              color: '#6717C2',
+              '&:hover': {
+                backgroundColor: 'rgba(128, 0, 128, 0.08)',
+              },
+            },
+            '& .MuiSwitch-switchBase.Mui-checked + .MuiSwitch-track': {
+              backgroundColor: '#6717C2',
+            },
+          }}
+        />
+      }
+      label="Featured"
+    />
             
-            name="toggle"
-            color="primary"
-            />
-            }
-            label="Display result"
-            />
+            <FormControlLabel
+      control={
+        <Switch
+        checked={toggles.displayResult}
+          onChange={handleChange}
+          name="displayResult"
+          sx={{
+            '& .MuiSwitch-switchBase.Mui-checked': {
+              color: '#6717C2',
+              '&:hover': {
+                backgroundColor: 'rgba(128, 0, 128, 0.08)',
+              },
+            },
+            '& .MuiSwitch-switchBase.Mui-checked + .MuiSwitch-track': {
+              backgroundColor: '#6717C2',
+            },
+          }}
+        />
+      }
+      label="Display result"
+    />
 
             </div>
      </div>
@@ -136,8 +233,8 @@ export default function VoteForm(){
    
     <input type="text" placeholder="Option" style={{marginTop:"15px",border:"none", borderRadius:"5px",padding:"10px",paddingLeft:'1%'}}></input>
 
-    <input type="text" placeholder="Option" style={{paddingLeft:"5px",marginTop:"15px",border:"none",borderRadius:"5px",paddingLeft:'1%',border:"none"}}></input>
-    <input type="text" placeholder="Option" style={{paddingLeft:"5px",marginTop:"15px",border:"none",borderRadius:"5px",paddingLeft:'1%',border:"none"}}></input>
+    <input type="text" placeholder="Option" style={{marginTop:"15px",border:"none", borderRadius:"5px",padding:"10px",paddingLeft:'1%'}}></input>
+    <input type="text" placeholder="Option" style={{marginTop:"15px",border:"none", borderRadius:"5px",padding:"10px",paddingLeft:'1%'}}></input>
  </div>
 
  <div style={{display:"flex",backgroundColor:'#F2F3F5',borderRadius:'5px',gap:"10px"}}>
@@ -168,48 +265,96 @@ export default function VoteForm(){
          
                 <div style={{display:"flex",flexDirection:"column",backgroundColor:"white",paddingLeft:"2%"}}>
 
-                    <FormControlLabel
-                    control={
-                    <Switch
+                <FormControlLabel
+      control={
+        <Switch
+        checked={toggles.title}
+          onChange={handleChange}
+          name="title"
+          sx={{
+            '& .MuiSwitch-switchBase.Mui-checked': {
+              color: '#6717C2',
+              '&:hover': {
+                backgroundColor: 'rgba(128, 0, 128, 0.08)',
+              },
+            },
+            '& .MuiSwitch-switchBase.Mui-checked + .MuiSwitch-track': {
+              backgroundColor: '#6717C2',
+            },
+          }}
+        />
+      }
+      label="Title"
+    />
                     
-                    name="toggle"
-                    color="primary"
-                    />
-                    }
-                    label="Title"
-                    />
-                    <FormControlLabel
-                    control={
-                    <Switch
+                <FormControlLabel
+      control={
+        <Switch
+        checked={toggles.avatar}
+          onChange={handleChange}
+          name="avatar"
+          sx={{
+            '& .MuiSwitch-switchBase.Mui-checked': {
+              color: '#6717C2',
+              '&:hover': {
+                backgroundColor: 'rgba(128, 0, 128, 0.08)',
+              },
+            },
+            '& .MuiSwitch-switchBase.Mui-checked + .MuiSwitch-track': {
+              backgroundColor: '#6717C2',
+            },
+          }}
+        />
+      }
+      label="Avatar"
+    />
+                     
+                <FormControlLabel
+      control={
+        <Switch
+        checked={toggles.banner}
+          onChange={handleChange}
+          name="banner"
+          sx={{
+            '& .MuiSwitch-switchBase.Mui-checked': {
+              color: '#6717C2',
+              '&:hover': {
+                backgroundColor: 'rgba(128, 0, 128, 0.08)',
+              },
+            },
+            '& .MuiSwitch-switchBase.Mui-checked + .MuiSwitch-track': {
+              backgroundColor: '#6717C2',
+            },
+          }}
+        />
+      }
+      label="Banner"
+    />
                     
-                    name="toggle"
-                    color="primary"
-                    />
-                    }
-                    label="Avatar"
-                    />
-                     <FormControlLabel
-                    control={
-                    <Switch
-                    
-                    name="toggle"
-                    color="primary"
-                    />
-                    }
-                    label="Banner"
-                    />
-                     <FormControlLabel
-                    control={
-                    <Switch
-                    
-                    name="toggle"
-                    color="primary"
-                    />
-                    }
-                    label="Points"
-                    />
+                <FormControlLabel
+      control={
+        <Switch
+        checked={toggles.points}
+          onChange={handleChange}
+          name="points"
+          sx={{
+            '& .MuiSwitch-switchBase.Mui-checked': {
+              color: '#6717C2',
+              '&:hover': {
+                backgroundColor: 'rgba(128, 0, 128, 0.08)',
+              },
+            },
+            '& .MuiSwitch-switchBase.Mui-checked + .MuiSwitch-track': {
+              backgroundColor: '#6717C2',
+            },
+          }}
+        />
+      }
+      label="Points"
+    />
                 </div>
          </div> 
+         <hr className="hrstyle"  ></hr>
 
 <div style={{display:"flex",gap:'10px'}}>
 <button className='btn' > Save</button>
