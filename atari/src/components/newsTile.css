@@ -1,0 +1,33 @@
+
+.Content{
+    padding-Left:2% ;
+    padding-Right:30%;
+    padding-Bottom:2%;
+    background-Color:#F2F3F5
+}
+.reqiurement{
+    width:17%;
+    border-Radius:5px;
+    border:1px solid #8E929F;
+    padding:4px
+}
+
+.checkbox{
+    display:flex;
+    gap:10px
+}
+
+
+.btn{
+    width:10%;
+    border-radius:10px;
+    padding:10px
+}
+
+
+.hrstyle{
+    margin-Top:25px;
+    margin-left:0;
+    width:85%;
+    margin-bottom: 20px;
+}
