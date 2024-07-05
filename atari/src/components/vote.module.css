@@ -1,9 +1,10 @@
 
 .Content{
     padding-Left:2% ;
-    padding-Right:30%;
+    /* padding-Right:30%; */
     padding-Bottom:2%;
-    background-Color:#F2F3F5
+    background-Color:#F2F3F5;
+    width:70%
 }
 .reqiurement{
     width:17%;
@@ -30,4 +31,17 @@
     margin-left:0;
     width:85%;
     margin-bottom: 20px;
+}
+
+
+p{
+    color:#596270
+}
+
+button{
+    color:#596270
+}
+
+label{
+    color:#596270
 }

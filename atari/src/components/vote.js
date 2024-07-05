@@ -1,5 +1,5 @@
 import { Switch, FormControlLabel } from '@mui/material';
-import './vote.css';
+import styles from './vote.module.css';
 import { useState } from 'react';
 
 export default function VoteForm(){
@@ -28,22 +28,22 @@ export default function VoteForm(){
     
     return(
         <>
-        <div className='Content'>
+        <div className={styles.Content}>
 
        
 <p style={{paddingTop:"10px"}}><b>Use this admin panel to create new content in Atari Club</b></p>
- <div style={{display:"flex"}}>
+ <div style={{display:"flex",justifyContent:"space-between"}}>
     <div style={{display:'flex',justifyContent:"space-between",width:"51%"}}>
-      <button className="btn1" ><b>CREATE ACHIEVEMENT</b></button>
-      <button className="btn1" style={{backgroundColor:"#E9D200"}} >CREATE VOTE</button>
-      <button className="btn1" >CREATE NEWS TITLE</button>
+      <button className={styles.btn1} ><b>CREATE ACHIEVEMENT</b></button>
+      <button className={styles.btn1}  style={{backgroundColor:"#E9D200"}} >CREATE VOTE</button>
+      <button className={styles.btn1}  >CREATE NEWS TITLE</button>
     </div>
 
 
-      <button  style={{padding:"10px", borderRadius:"10px",marginLeft:"39%",color:'white',backgroundColor:'black'}}>VIEW ALL</button>
+      <button  style={{padding:"10px", borderRadius:"10px",color:'white',backgroundColor:'black'}}>VIEW ALL</button>
  </div> 
 
- <hr className="hrstyle"  ></hr>
+ <hr className={styles.hrstyle}  ></hr>
 
  <div style={{backgroundColor:"#F2F3F5"}}>
         <p> <b>Select the vote type (select one)</b></p>
@@ -144,7 +144,7 @@ label="Rating"
       
  
 
- <hr className="hrstyle  " ></hr>
+ <hr className={styles.hrstyle} ></hr>
 
  <div style={{display:'flex',flexDirection:"column"}}>
     <input type="text" placeholder="Title" style={{border:"none",borderRadius:"5px",padding:'10px',paddingLeft:'1%'}}></input>
@@ -155,11 +155,11 @@ label="Rating"
  </div>
 
  <div style={{display:"flex",backgroundColor:'#F2F3F5',borderRadius:'5px',gap:"10px"}}>
-    <p  className="reqiurement" >Select vote creator +</p>
+    <p  className={styles.reqiurement} >Select vote creator +</p>
     
  </div>
 
- <hr className="hrstyle"  ></hr>
+ <hr className={styles.hrstyle}  ></hr>
 
  <div style={{backgroundColor:"#F2F3F5"}}>
         <p> <b>Enter vote details</b></p>
@@ -217,11 +217,11 @@ label="Rating"
 
           
      <div style={{display:"flex",borderRadius:'5px',gap:"10px"}}>
-            <p  className="reqiurement" >Start date and time  +</p>
-            <p className="reqiurement" style={{backgroundColor:'#F2F3F5'}}>End date and time +</p>
+            <p  className={styles.reqiurement} >Start date and time  +</p>
+            <p className={styles.reqiurement} style={{backgroundColor:'#F2F3F5'}}>End date and time +</p>
     </div>
 
-    <hr className="hrstyle"  ></hr>
+    <hr className={styles.hrstyle}  ></hr>
     
 
     <div>
@@ -238,7 +238,7 @@ label="Rating"
  </div>
 
  <div style={{display:"flex",backgroundColor:'#F2F3F5',borderRadius:'5px',gap:"10px"}}>
-            <p  className="reqiurement" >More info url  +</p>
+            <p  className={styles.reqiurement} >More info url  +</p>
             
  </div>
 
@@ -246,7 +246,7 @@ label="Rating"
  
 
 
- <hr className="hrstyle"  ></hr>
+ <hr className={styles.hrstyle}  ></hr>
 
  
  <div>
@@ -257,7 +257,7 @@ label="Rating"
       </div>
     </div>
 
-    <hr className="hrstyle"  ></hr>
+    <hr className={styles.hrstyle}  ></hr>
 
     <div style={{backgroundColor:"#F2F3F5"}}>
                 <p> <b>Rewards</b></p>
@@ -354,11 +354,11 @@ label="Rating"
     />
                 </div>
          </div> 
-         <hr className="hrstyle"  ></hr>
+         <hr className={styles.hrstyle}  ></hr>
 
 <div style={{display:"flex",gap:'10px'}}>
-<button className='btn' > Save</button>
-<button  className='btn' >Cancel</button>
+<button className={styles.btn} > Save</button>
+<button  className={styles.btn} >Cancel</button>
 </div>
 
  </div>

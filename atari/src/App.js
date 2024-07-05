@@ -6,11 +6,11 @@ import VoteForm from "./components/vote";
 function App() {
   return (
     <div className="App">
-    {/* <Form/>  */}
+    <Form/> 
        {/* <Profile_Header/>  */}
 
        {/* <NewsTile/> */}
-       <VoteForm/>
+       {/* <VoteForm/> */}
     </div>
   );
 }

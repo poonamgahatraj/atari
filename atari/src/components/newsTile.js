@@ -1,23 +1,39 @@
 import { Switch, FormControlLabel } from '@mui/material';
-import './newsTile.css'
+import styles from './newsTile.module.css';
+import { useState } from 'react';
 
 export default function NewsTile(){
+
+    const [toggles, setToggles] = useState({
+       featured: false,
+       published: false,
+        
+      });
+
+      const handleChange = (event) => {
+        const { name, checked } = event.target;
+        setToggles((prevToggles) => ({
+          ...prevToggles,
+          [name]: checked,
+        }));
+      };
+
     return(
         <>
-        <div className='Content'>
+        <div className={styles.Content}>
 
        
-        {/* <p><b>Use this admin panel to create new content in Atari Club</b></p>
-         <div style={{display:"flex"}}>
-            <div style={{display:'flex',justifyContent:"space-between",width:"51%"}}>
-              <button className="btn1" ><b>CREATE ACHIEVEMENT</b></button>
-              <button className="btn1" >CREATE VOTE</button>
-              <button className="btn1" >CREATE NEWS TITLE</button>
+        <p><b>Use this admin panel to create new content in Atari Club</b></p>
+         <div style={{display:"flex",justifyContent:'space-between'}}>
+            <div style={{display:'flex',gap:"10px"}}>
+              <button className={styles.btn1} ><b>CREATE ACHIEVEMENT</b></button>
+              <button className={styles.btn1} >CREATE VOTE</button>
+              <button className={styles.btn1} style={{backgroundColor:"#E9D200"}} >CREATE NEWS TITLE</button>
             </div>
 
 
-              <button  style={{padding:"10px", borderRadius:"10px",marginLeft:"39%",color:'white',backgroundColor:'black'}}>VIEW ALL</button>
-         </div> */}
+              <button  style={{padding:"10px", borderRadius:"10px",color:'white',backgroundColor:'black'}}>VIEW ALL</button>
+         </div>
 
          <div style={{backgroundColor:"#F2F3F5"}}>
                 <p> <b>Status</b></p>
@@ -25,26 +41,48 @@ export default function NewsTile(){
          
                 <div style={{display:"flex",flexDirection:"column",backgroundColor:"white",paddingLeft:"2%"}}>
 
-                    <FormControlLabel
-                    control={
-                    <Switch
-                    
-                    name="toggle"
-                    color="primary"
-                    />
-                    }
-                    label="Featured"
-                    />
-                    <FormControlLabel
-                    control={
-                    <Switch
-                    
-                    name="toggle"
-                    color="primary"
-                    />
-                    }
-                    label="Published"
-                    />
+                <FormControlLabel
+      control={
+        <Switch
+        checked={toggles.featured}
+          onChange={handleChange}
+           name="featured"
+          sx={{
+            '& .MuiSwitch-switchBase.Mui-checked': {
+              color: '#6717C2',
+              '&:hover': {
+                backgroundColor: 'rgba(128, 0, 128, 0.08)',
+              },
+            },
+            '& .MuiSwitch-switchBase.Mui-checked + .MuiSwitch-track': {
+              backgroundColor: '#6717C2',
+            },
+          }}
+        />
+      }
+      label="Featured"
+    />
+                   <FormControlLabel
+      control={
+        <Switch
+        checked={toggles.published}
+          onChange={handleChange}
+           name="published"
+          sx={{
+            '& .MuiSwitch-switchBase.Mui-checked': {
+              color: '#6717C2',
+              '&:hover': {
+                backgroundColor: 'rgba(128, 0, 128, 0.08)',
+              },
+            },
+            '& .MuiSwitch-switchBase.Mui-checked + .MuiSwitch-track': {
+              backgroundColor: '#6717C2',
+            },
+          }}
+        />
+      }
+      label="Published"
+    />
                 </div>
          </div>
 
@@ -54,7 +92,7 @@ export default function NewsTile(){
             <p className="reqiurement" style={{backgroundColor:'#F2F3F5'}}>End date and time +</p>
          </div>
 
-         <hr className="hrstyle  " ></hr>
+         <hr className={styles.hrstyle} ></hr>
 
          <div style={{display:'flex',flexDirection:"column"}}>
             <input type="text" placeholder="Title" style={{border:"none",borderRadius:"5px",padding:'10px',paddingLeft:'1%'}}></input>
@@ -67,40 +105,40 @@ export default function NewsTile(){
          </div>
 
          <div style={{display:"flex",backgroundColor:'#F2F3F5',borderRadius:'5px',gap:"10px"}}>
-            <p  className="reqiurement" >Select author  +</p>
+            <p  className={styles.reqiurement} >Select author  +</p>
             
          </div>
 
-         <hr className="hrstyle"  ></hr>
+         <hr className={styles.hrstyle}  ></hr>
 
 
          
          <p><b>Select the news category</b></p>
 
          <div style={{backgroundColor:'white',padding:"10px",gap: '10px',display:"flex",gap:"75px"}}>
-            <div className='checkbox' >
+            <div className={styles.checkbox} >
               <input type="checkbox"></input>
               <label>Community</label>
             </div>
-          <div className='checkbox' >
+          <div className={styles.checkbox} >
               <input type="checkbox"></input>
               <label>Club</label>
           </div>
-          <div className='checkbox' >
+          <div className={styles.checkbox} >
               <input type="checkbox"></input>
               <label>Games</label>
           </div>
-           <div className='checkbox' >
+           <div className={styles.checkbox} >
               <input type="checkbox"></input>
               <label>Hardware</label>
            </div>
-          <div  className='checkbox' >
+          <div  className={styles.checkbox}>
               <input type="checkbox"></input>
               <label>Shopping</label>
           </div>
           
          </div>
-         <hr className="hrstyle"  ></hr>
+         <hr className={styles.hrstyle}  ></hr>
 
          
          <div>
@@ -111,11 +149,11 @@ export default function NewsTile(){
               </div>
             </div>
 
-            <hr className="hrstyle"  ></hr>
+            <hr className={styles.hrstyle} ></hr>
 
 <div style={{display:"flex",gap:'10px'}}>
-    <button className='btn' > Save</button>
-    <button  className='btn' >Cancel</button>
+    <button className={styles.btn} > Save</button>
+    <button  className={styles.btn} >Cancel</button>
 </div>
 
          </div>

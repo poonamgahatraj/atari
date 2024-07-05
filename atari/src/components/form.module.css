@@ -6,13 +6,15 @@
 
 .Content{
     padding-Left:2% ;
-    padding-Right:30%;
-    padding-Bottom:2%
+    /* padding-Right:30%; */
+    padding-Bottom:2%;
+    width:70%
 }
 .btn{
     width:10%;
     border-radius:10px;
-    padding:10px
+    padding:10px;
+    font-size: 16px;
 }
 
 .btn1{
@@ -27,7 +29,7 @@
 }
 
 .reqiurement{
-    width:22%;
+    width:24%;
     border-Radius:5px;
     border:1px solid #8E929F;
     padding:1%
@@ -36,4 +38,16 @@
 .checkbox{
     display:flex;
     gap:10px
+}
+
+p{
+    color:#596270
+}
+
+button{
+    color:#596270
+}
+
+label{
+    color:#596270
 }
