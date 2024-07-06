@@ -3,43 +3,43 @@
     height:100%;
     background-Color:#F2F3F5
 }
+
 .Content{
     padding-Left:2% ;
     /* padding-Right:30%; */
     padding-Bottom:2%;
-    background-Color:#F2F3F5;
-   
+ 
 }
+.btn{
+    width:10%;
+    border-radius:10px;
+    padding:10px;
+    font-size: 16px;
+}
+
+.btn1{
+    padding:10px;
+     border-Radius:10px
+}
+
+.hrstyle{
+    margin-Top:25px;
+    margin-left:0;
+    width:85%
+}
+
 .reqiurement{
-    width:17%;
+    width:24%;
     border-Radius:10px;
     border:1px solid #8E929F;
-    padding:1%
+    padding:1%;
+    margin:0
 }
 
 .checkbox{
     display:flex;
     gap:10px
 }
-
-
-.btn{
-    width:10%;
-    border-radius:10px;
-    padding:10px;
-    font-size: 16px;
-    
-}
-
-
-.hrstyle{
-    margin-Top:25px;
-    margin-left:0;
-    width:85%;
-    margin-bottom: 20px;
-}
-
-
 
 
 button{
@@ -50,10 +50,6 @@ label{
     color:#596270
 }
 
-.btn1{
-    color:black
-}
-
 .input{
     font-size: 14px;
     border: none;
@@ -61,27 +57,55 @@ label{
     padding:10px;
     padding-Left:1%;
     letter-Spacing:1px
+
+
+
 }
-.bannerImage{
-    width:21%;
+.category{
+    background-Color:white;
+    padding:10px;
+    display:flex;
+    gap:75px;
+    border-Radius:5px
+}
+
+.reqach{
+    width:25%;
     border-Radius:10px;
     padding:1%;
     border:1px solid #8E929F;
-     color:#596270;
-     margin:0
+    background-Color:#F2F3F5
 }
 
+.selectImage{
+    width:21%;
+    border-Radius:10px;
+    padding:1%;
+    border:1px solid #8E929F
+}
 
 @media (min-width: 480px) and (max-width: 768px) {
     /* Your styles for devices between 480px and 768px wide */
-    .reqiurement{
-        width:25%;
-       
+    .category{
+     gap:15px;
     }
+
     
-.bannerImage{
-    width:32%;
+.reqach{
+    width:45%;
    
+}
+
+
+.reqiurement{
+    width:35%;
+ 
+}
+
+
+.selectImage{
+    width:32%;
+  
 }
 
 
@@ -89,22 +113,34 @@ label{
     width:15%;
   
 }
-    
+
 
 }
 
 
+
 @media (min-width: 769px) and (max-width: 1024px) {
   
-    .reqiurement{
-        width:23%;
+    .category{
+        gap:35px;
+       }
+
+       .reqach{
+        width:33%;
        
     }
 
-    .bannerImage{
-        width:27%;
-       
+    .reqiurement{
+        width:30%;
+     
     }
+
+    
+.selectImage{
+    width:27%;
+  
+}
+
 
     .btn{
         width:13%;

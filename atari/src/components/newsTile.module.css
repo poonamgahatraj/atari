@@ -1,28 +1,36 @@
+.Container{
+    width:100%;
+    height:100%;
+    background-Color:#F2F3F5
+}
+
 
 .Content{
     padding-Left:2% ;
     /* padding-Right:30%; */
     padding-Bottom:2%;
     background-Color:#F2F3F5;
-    width:70%
+   
 }
 .reqiurement{
     width:17%;
     border-Radius:5px;
     border:1px solid #8E929F;
-    padding:4px
+    padding:1%
 }
 
 .checkbox{
     display:flex;
-    gap:10px
+    gap:10px;
+    border-radius: 5px;
 }
 
 
 .btn{
-    width:10%;
+    width:13%;
     border-radius:10px;
-    padding:10px
+    padding:10px;
+    font-size: 16px;
 }
 
 
@@ -33,9 +41,6 @@
     margin-bottom: 20px;
 }
 
-p{
-    color:#596270
-}
 
 button{
     color:#596270
@@ -44,3 +49,60 @@ button{
 label{
     color:#596270
 }
+
+.input{
+    font-size: 14px;
+    border: none;
+    border-Radius:5px;
+    padding:1%;
+    
+    letter-Spacing:1px
+}
+
+.category{
+    background-Color:white;
+    padding:10px;
+    display:flex;
+    gap:75px
+}
+
+.imageUpload{
+    width:20%;
+    border-Radius:5px;
+    padding:1%;
+    border:1px solid #8E929F
+}
+
+
+@media (min-width: 480px) and (max-width: 768px) {
+  
+
+    .reqiurement{
+        width:25%;
+       
+    }
+    
+.category{
+   
+    gap:15px;
+}
+   
+.imageUpload{
+    width:32%;
+    
+} 
+}
+
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  
+    .reqiurement{
+        width:23%;
+       
+    }
+
+    .imageUpload{
+        width:26%;
+        
+    } 
+  }

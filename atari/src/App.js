@@ -7,10 +7,10 @@ function App() {
   return (
     <div className="App">
     <Form/> 
-       {/* <Profile_Header/>  */}
+        {/* <Profile_Header/> 
 
-       {/* <NewsTile/> */}
-       {/* <VoteForm/> */}
+        <NewsTile/> 
+        <VoteForm/>  */}
     </div>
   );
 }

@@ -28,28 +28,17 @@ export default function VoteForm(){
     
     return(
         <>
+        <div className={styles.Container}>
         <div className={styles.Content}>
 
        
-<p style={{paddingTop:"10px"}}><b>Use this admin panel to create new content in Atari Club</b></p>
- <div style={{display:"flex",justifyContent:"space-between"}}>
-    <div style={{display:'flex',justifyContent:"space-between",width:"51%"}}>
-      <button className={styles.btn1} ><b>CREATE ACHIEVEMENT</b></button>
-      <button className={styles.btn1}  style={{backgroundColor:"#E9D200"}} >CREATE VOTE</button>
-      <button className={styles.btn1}  >CREATE NEWS TITLE</button>
-    </div>
 
-
-      <button  style={{padding:"10px", borderRadius:"10px",color:'white',backgroundColor:'black'}}>VIEW ALL</button>
- </div> 
-
- <hr className={styles.hrstyle}  ></hr>
 
  <div style={{backgroundColor:"#F2F3F5"}}>
         <p> <b>Select the vote type (select one)</b></p>
 
  
-        <div style={{display:"flex",flexDirection:"column",backgroundColor:"white",paddingLeft:"2%"}}>
+        <div style={{display:"flex",flexDirection:"column",backgroundColor:"white",padding:"2%",borderRadius:"5px"}}>
 
            
         <FormControlLabel
@@ -146,12 +135,16 @@ label="Rating"
 
  <hr className={styles.hrstyle} ></hr>
 
- <div style={{display:'flex',flexDirection:"column"}}>
-    <input type="text" placeholder="Title" style={{border:"none",borderRadius:"5px",padding:'10px',paddingLeft:'1%'}}></input>
-   
-    <input type="text" placeholder="Description" style={{marginTop:"15px",height:"60px",border:"none", borderRadius:"5px",paddingLeft:'1%'}}></input>
+ <div>
+  <p><b>Enter vote information</b></p>
+ </div>
 
-    <input type="text" placeholder="success copy" style={{paddingLeft:"5px",height:"60px",marginTop:"15px",border:"none",borderRadius:"5px",paddingLeft:'1%'}}></input>
+ <div style={{display:'flex',flexDirection:"column"}}>
+    <input className={styles.input} type="text" placeholder="Title" ></input>
+   
+    <input className={styles.input} type="text" placeholder="Description" style={{marginTop:"15px",height:"60px"}}></input>
+
+    <input className={styles.input} type="text" placeholder="success copy" style={{paddingLeft:"5px",height:"60px",marginTop:"15px"}}></input>
  </div>
 
  <div style={{display:"flex",backgroundColor:'#F2F3F5',borderRadius:'5px',gap:"10px"}}>
@@ -165,7 +158,7 @@ label="Rating"
         <p> <b>Enter vote details</b></p>
 
  
-        <div style={{display:"flex",flexDirection:"column",backgroundColor:"white",paddingLeft:"2%"}}>
+        <div style={{display:"flex",flexDirection:"column",backgroundColor:"white",padding:"2%",borderRadius:"5px"}}>
 
             
         <FormControlLabel
@@ -225,20 +218,20 @@ label="Rating"
     
 
     <div>
-    <p> <b>vote options</b></p>
+    <p> <b>Vote options</b></p>
 
     </div>
     <div style={{display:'flex',flexDirection:"column"}}>
-    <input type="text" placeholder="Option" style={{border:"none",borderRadius:"5px",padding:'10px',paddingLeft:'1%'}}></input>
+    <input className={styles.input} type="text" placeholder="Option" ></input>
    
-    <input type="text" placeholder="Option" style={{marginTop:"15px",border:"none", borderRadius:"5px",padding:"10px",paddingLeft:'1%'}}></input>
+    <input className={styles.input} type="text" placeholder="Option" style={{marginTop:"15px"}}></input>
 
-    <input type="text" placeholder="Option" style={{marginTop:"15px",border:"none", borderRadius:"5px",padding:"10px",paddingLeft:'1%'}}></input>
-    <input type="text" placeholder="Option" style={{marginTop:"15px",border:"none", borderRadius:"5px",padding:"10px",paddingLeft:'1%'}}></input>
+    <input className={styles.input} type="text" placeholder="Option" style={{marginTop:"15px"}}></input>
+    <input className={styles.input} type="text" placeholder="Option" style={{marginTop:"15px"}}></input>
  </div>
 
  <div style={{display:"flex",backgroundColor:'#F2F3F5',borderRadius:'5px',gap:"10px"}}>
-            <p  className={styles.reqiurement} >More info url  +</p>
+            <p  className={styles.reqiurement} style={{ color:"#596270"}}>More info url  +</p>
             
  </div>
 
@@ -252,8 +245,8 @@ label="Rating"
  <div>
         <p><b>Upload banner image (1000 x 250px)</b></p>
         
-      <div style={{backgroundColor:"white",borderRadius:"5px",padding:"1px",paddingLeft:"10px"}}>
-           <p style={{width:"20%",borderRadius:'5px',padding:"1%",border:'1px solid #8E929F'}}>Select image to upload  +</p>
+      <div style={{backgroundColor:"white",borderRadius:"5px",padding:"2%"}}>
+           <p className={styles.bannerImage} >Select image to upload  +</p>
       </div>
     </div>
 
@@ -263,7 +256,7 @@ label="Rating"
                 <p> <b>Rewards</b></p>
 
          
-                <div style={{display:"flex",flexDirection:"column",backgroundColor:"white",paddingLeft:"2%"}}>
+                <div style={{display:"flex",flexDirection:"column",backgroundColor:"white",padding:"2%"}}>
 
                 <FormControlLabel
       control={
@@ -361,6 +354,7 @@ label="Rating"
 <button  className={styles.btn} >Cancel</button>
 </div>
 
+ </div>
  </div>
         </>
     )
