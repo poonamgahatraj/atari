@@ -1,0 +1,71 @@
+.Container{
+    width:100%;
+    border-radius: 5px;
+    padding:2%;
+    background-color: #F2F3F5;
+    box-sizing: border-box;
+    color:#5E6673;
+}
+
+.btn1{
+    padding: 5px;
+    border-radius: 10px;
+    width: 45%;
+    text-align: left;
+    border:1px solid #7B828D;
+    color:#7B828D
+}
+
+
+.btn2{
+    padding: 8px;
+    border-radius: 10px;
+    width:35%;
+    border:1px solid #636466
+}
+
+.btn3{
+   
+    border-radius: 15px;
+   border:none;
+   padding:5px;
+    background-color: #E9E9E9;
+    color:#8A899B
+}
+
+.btn4{
+    width:10%;
+    border-radius:10px;
+    padding:10px;
+    font-size: 16px;
+}
+
+.Info{
+  display:flex;
+  justify-Content:space-between;
+  border-Radius:10px;
+  background-Color:white;
+  margin-Bottom:10px;
+  align-Items:center;
+  padding-Left:15px;
+  padding-Right:15px
+}
+
+.btn5{
+    display:flex;
+    gap:10px;
+    width:20%;
+    justify-Content:flex-end
+}
+
+
+@media (min-width: 480px) and (max-width: 768px) {
+    /* Your styles for devices between 480px and 768px wide */
+   
+.btn5{
+   
+    width:30%;
+   
+}
+
+}
