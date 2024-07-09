@@ -1,3 +1,7 @@
+import Account from "./components/Accounts";
+import DashboardHeader from "./components/dasboardHeader";
+import Dashboard from "./components/dashboard";
+import FinalDashboard from "./components/FinalDashboard";
 import Form from "./components/form";
 import NewsTile from "./components/newsTile";
 import Profile_Header from "./components/profileHeader";
@@ -7,13 +11,20 @@ import VoteForm from "./components/vote";
 function App() {
   return (
     <div className="App">
-    {/* <Form/> 
+   {/* <Form/> 
         {/* <Profile_Header/> 
 
         <NewsTile/> 
-        <VoteForm/>  */} 
+        <VoteForm/>  
 
         <ViewContent />
+
+        <Dashboard/> 
+
+        <DashboardHeader/>
+
+        <Account/>*/}
+        <FinalDashboard/>
     </div>
   );
 }

@@ -17,7 +17,7 @@ export default function ViewContent (){
             <div style={{display:"flex",justifyContent:"space-between"}}>
                 <button className={styles.btn1}>Search</button>
 
-                <div style={{display:"flex",gap:"10px",width:"20%",justifyContent:"flex-end"}}>
+                <div className={styles.btn5} >
                     <button className={styles.btn2}><b>TYPE </b> </button>
                     <button className={styles.btn2}><b>STATUS</b> </button>
                 </div>

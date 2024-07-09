@@ -1,0 +1,35 @@
+.Container{
+  width:85%;
+  background-color: #F9FAFC;
+  padding-left: 3%;
+
+}
+
+.btn{
+    border-radius: 10px;
+    background-color: #E9E900;
+    width: 10%;
+    
+    border: none;
+    height: 30px;
+    color: black;
+}
+
+.box{
+   
+    border-radius: 5px;
+    background-color: white;
+    color: #8EA0A6;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-Shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding:10px;
+    width:17%
+}
+
+.para{
+    margin:0;
+    font-size: 12px;
+}
