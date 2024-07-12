@@ -14,6 +14,19 @@
     height: 30px;
     color: black;
 }
+.data{
+    margin:0
+}
+
+.Pixel{
+ background-Color:white;
+ border-Radius:10px;
+ width:47%;
+ display:flex;
+ justify-Content:space-between;
+ padding:15px;
+ box-Shadow: 0px 4px 8px rgba(0, 0, 0, 0.1)
+}
 
 .box{
    
@@ -33,3 +46,99 @@
     margin:0;
     font-size: 12px;
 }
+
+
+.notification{
+    display:flex;
+    gap:5%;
+    width:47%  
+}
+
+.username{
+   background-Color:white;
+   border-Radius:10px ;
+   display:flex;
+   justify-Content:space-between;
+   padding:15px;
+   margin-Top:3%;
+   box-Shadow:0px 4px 8px rgba(0, 0, 0, 0.1)
+}
+
+.subusername{
+    width:64%;
+    display:flex;
+    justify-Content:space-between
+}
+
+@media (min-width: 480px) and (max-width: 768px){
+
+    .box{
+
+        width:13%
+    }
+
+    .para{
+       
+        font-size: 8px;
+    }
+
+    
+.notification{
+ 
+    width:45%  
+}
+
+.btn{
+
+    width: 18%;
+    
+}
+}
+
+
+@media (max-width: 480px) {
+    .Container{
+        width:100vw;
+      
+        padding:10px;
+        background-color: #F2F3F5;
+        box-sizing: border-box;
+       
+      
+    }
+    
+.Pixel{
+   padding:0 10px
+   }
+   
+.username{
+  box-sizing: border-box;
+ }
+
+ .subusername{
+    width:95%;
+   
+}
+
+     
+.para{
+  
+    font-size: 10px;
+}
+
+
+.box{
+   padding:0;
+   width:21%
+}
+.btn{
+width: 21%;
+
+}
+.data{
+    font-size: 12px;
+}
+
+
+}
+    

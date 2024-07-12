@@ -5,6 +5,92 @@
   
 }
 
+
+.Content{
+    display:flex;
+    flex-Direction:column;
+    gap:40px
+}
+
 .dashContent{
     padding-left: 5%;
 }
+
+.heading{
+    padding:5%
+}
+
+.logout{
+   display:flex;
+   justify-Content:center;
+   margin-Top:50%
+}
+
+.btn{
+background-Color:black;
+color:white;
+border-Radius:10px;
+width:60%;
+padding:10px
+}
+
+@media (max-width: 480px) {
+    .Container{
+        width:100vw;
+        height:20vh;
+        padding:10px;
+       box-sizing:border-box;
+       display: flex;
+       align-items: center;
+      
+    }
+
+    .Content{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .dashContent p{
+       display: none;
+    }
+
+    .dashContent img{
+        height:25px
+     }
+
+     .Dashboard{
+        display: flex;
+        justify-content: space-between;
+        width: 30vw;
+     
+     }
+     
+     .Dashboard2{
+        display: flex;
+      justify-content: space-between;
+      width:55vw
+     
+     }
+     .heading{
+        padding:0
+    }
+
+     .heading p{
+        display: none
+     }
+     .logout{
+      
+        margin-Top:0
+     }
+
+     .btn{
+       width:100%;
+        padding:0
+        }
+
+  
+    
+
+}
+

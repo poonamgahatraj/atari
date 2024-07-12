@@ -1,7 +1,9 @@
+import styles from './dashboardHeader.module.css'
+
 export default function DashboardHeader(){
     return(
         <>
-        <div style={{width:"100%",height:"200px", background:"linear-gradient(to right, #FD5B2C, #F2911C)",display:"flex",justifyContent:"center",alignItems:"center", borderRadius:"15px"}}>
+        <div className={styles.Container}>
 
         <div style={{height:"100px",width:'100px',border:"3px solid white",borderRadius:"50%",backgroundColor:"white",position:"relative"}}>
         <div style={{height:"90px",width:'90px',borderRadius:"50%",background: 'linear-gradient(to right, #FD5B2C, #F2911C)',position:"absolute",top:"5%",left:"5%"}}>

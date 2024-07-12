@@ -17,31 +17,70 @@ export default function Dashboard (){
     return(
         <>
         <div className={styles.Container}>
-            <div style={{display:"flex",flexDirection:"column",gap:'40px'}}>
+            <div  className={styles.Content}>
             <div>
-            <div style={{padding:"5%"}}>
+            <div className={styles.heading} >
             <p><b>DASHBOARD</b></p>
             </div>
+          <div className={styles.Dashboard}>
 
-          
-            <p className={styles.dashContent}  style={getItemStyle('account')} onClick={() => handleSelect('account')}>Account</p>
-            <p className={styles.dashContent} style={getItemStyle('discount')} onClick={() => handleSelect('discount')}>Discount Portal</p>
-            <p className={styles.dashContent} style={getItemStyle('notification')} onClick={() => handleSelect('notification')}>Notifications</p>
+        
+          <div className={styles.dashContent} style={{...getItemStyle('account'),display:"flex",alignItems:"center",gap:"10px"}}>
+            <img src='.\accountIcon.png' style={{height:"15px"}}></img>
+          <p    onClick={() => handleSelect('account')}>Account</p>
+          </div>
+            <div className={styles.dashContent} style={{...getItemStyle('discount'),display:"flex",alignItems:"center",gap:"10px"}}>
+                <img src='.\portal.webp' style={{height:"15px"}}></img>
+            <p  onClick={() => handleSelect('discount')}>Discount Portal</p>
+            </div>
+
+            <div className={styles.dashContent} style={{...getItemStyle('notification'),display:"flex",alignItems:"center",gap:"10px"}}>
+                <img src='.\notification.webp' style={{height:"15px"}}></img>
+                <p  onClick={() => handleSelect('notification')}>Notifications</p>
+            </div>
+
+            </div>
+           
+            
         </div>
 
         <div>
-        <div style={{padding:"5%"}}>
+        <div className={styles.heading}>
             <p><b>ACCOUNT SETTINGS</b></p>
             </div>
-            <p  className={styles.dashContent} style={getItemStyle('profile')} onClick={() => handleSelect('profile')}>Profile</p>
-            <p  className={styles.dashContent} style={getItemStyle('club')} onClick={() => handleSelect('club')}>My Club Card</p>
-            <p  className={styles.dashContent} style={getItemStyle('connection')} onClick={() => handleSelect('connection')}>Connections</p>
-        </div>
+<div className={styles.Dashboard2}>
+
+
+            <div className={styles.dashContent} style={{...getItemStyle('account') ,display:"flex",alignItems:"center",gap:"10px"}}>
+                <img src='.\profile.jpg' style={{height:"15px"}}></img>
+                <p   onClick={() => handleSelect('profile')}>Profile</p>
             </div>
 
-            <div style={{display:"flex",justifyContent:"center",marginTop:"50%"}}>
-                <button style={{backgroundColor:"black",color:'white',borderRadius:'10px',width:"60%",padding:"10px"}}>Log out</button>
+            <div className={styles.dashContent} style={{...getItemStyle('account'),display:"flex",alignItems:"center",gap:"10px"}}>
+                <img src='.\card.jpg' style={{height:"15px"}}></img>
+                <p  onClick={() => handleSelect('club')}>My Club Card</p>
+           
+          </div>
+
+          <div className={styles.dashContent} style={{...getItemStyle('account'),display:"flex",alignItems:"center",gap:"10px"  }}>
+                <img src='.\location.jpg' style={{height:"15px"}}></img>
+                <p  onClick={() => handleSelect('connection')}>Connections</p>
+                </div>
+
+                <div className={styles.logout} >
+                <button className={styles.btn}style={{backgroundColor:"black",color:'white',borderRadius:'10px',width:"60%",padding:"10px"}}>Log out</button>
             </div>
+
+                </div>
+          </div>
+
+         
+         
+
+           
+            </div>
+
+           
        
         </div>
         </>

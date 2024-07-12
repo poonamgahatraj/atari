@@ -23,7 +23,7 @@ export default function Account (){
 </div>
 
 <div style={{display:"flex",justifyContent:"space-between",marginTop:"2%"}}>
-<div style={{backgroundColor:"white",borderRadius:"10px" ,width:"47%",display:"flex",justifyContent:"space-between",padding:"15px",boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.1)"}}>
+<div  className={ styles.Pixel}>
     <div style={{display:"flex",justifyContent:"center",alignItems:'center',gap:"10px"}}>
         <div>
         <img src=".\dog.jpg" style={{height:"40px",width:"40px",borderRadius:"50%" }}></img>
@@ -41,7 +41,7 @@ export default function Account (){
 
   
 </div>
-<div style={{display:"flex",gap:"5%",width:"47%"}}>
+<div className={styles.notification} style={{display:"flex",gap:"5%",width:"47%"}}>
 <div className={styles.box}>
     <p className={styles.para}style={{fontSize:'18px'}}>12</p>
     <p className={styles.para}>Notifications</p>
@@ -62,28 +62,28 @@ export default function Account (){
 
 </div>
 
-<div style={{backgroundColor:"white",borderRadius:"10px" ,display:"flex",justifyContent:"space-between",padding:"15px",marginTop:"3%",boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.1)"}}>
-<div style={{width:"64%",display:"flex",justifyContent:"space-between"}}>
+<div className={styles.username}>
+<div  className={styles.subusername} >
 <div>
 <p className={styles.para}>Username</p>
-{data.userName}
+<p className={styles.data}>{data.userName}</p>
 </div>
 
 <div>
 <p className={styles.para}>First Name</p>
-{data.firstName}
+<p className={styles.data}>{data.firstName}</p>
 </div>
 
 
 <div>
 <p className={styles.para}>Last Name</p>
-{data.lastName}
+<p className={styles.data}>{data.lastName}</p>
 </div>
 
 
 <div>
 <p className={styles.para}>Email</p>
-{data.email}
+<p className={styles.data}>{data.email}</p>
 </div>
 
 
@@ -93,7 +93,7 @@ export default function Account (){
 <div style={{display:"flex",justifyContent:"center",width:"25%"}}>
 <div >
 <p className={styles.para}>Join date</p>
-{data.joinDate}
+<p className={styles.data}>{data.joinDate}</p>
 </div>
 </div>
 
