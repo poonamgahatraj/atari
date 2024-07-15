@@ -39,9 +39,7 @@
     align-Items:center
   }
   @media (max-width: 480px) {
-    .Content {
-      flex-direction: column;
-    }
+    
 
     .sidebar{
         width:100%

@@ -27,8 +27,8 @@
     } 
     
 .Content{
-  
-    width:100vw;
+  position: relative;
+    width:24vw;
  
   }
   

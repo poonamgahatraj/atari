@@ -5,6 +5,12 @@
 
 }
 
+.Content{
+display:flex;
+justify-Content:space-between;
+margin-Top:2%
+}
+
 .btn{
     border-radius: 10px;
     background-color: #E9E900;
@@ -103,12 +109,33 @@
         padding:10px;
         background-color: #F2F3F5;
         box-sizing: border-box;
+        height:100vh
        
       
     }
+
+    .box{
+        width: 20%;
+        height: 60px;
+    }
+
+    
+.notification{
+   
+    width:100%;
+    margin-top:2%
+}
+
+   
+.Content{
+   display: block;
+    } 
+
     
 .Pixel{
-   padding:0 10px
+   padding:0 10px;
+   width:100%;
+   box-sizing: border-box;
    }
    
 .username{

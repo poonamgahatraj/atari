@@ -22,7 +22,7 @@ export default function Account (){
 <button className={styles.btn}>Edit Account</button>
 </div>
 
-<div style={{display:"flex",justifyContent:"space-between",marginTop:"2%"}}>
+<div className={styles.Content} >
 <div  className={ styles.Pixel}>
     <div style={{display:"flex",justifyContent:"center",alignItems:'center',gap:"10px"}}>
         <div>
@@ -41,7 +41,7 @@ export default function Account (){
 
   
 </div>
-<div className={styles.notification} style={{display:"flex",gap:"5%",width:"47%"}}>
+<div className={styles.notification} >
 <div className={styles.box}>
     <p className={styles.para}style={{fontSize:'18px'}}>12</p>
     <p className={styles.para}>Notifications</p>

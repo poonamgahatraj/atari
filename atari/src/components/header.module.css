@@ -1,0 +1,33 @@
+
+.MainContent{
+    display:flex;
+     justify-Content:space-between;
+     align-Items:center
+   }
+
+   .Shop{
+    display:flex;
+    align-Items:center;
+   gap:20px;
+   
+    
+  }
+
+  .header{
+    font-size: 20px;
+  }
+
+  .Home{
+    display:flex;
+  
+   gap:20px;
+    align-Items:center
+   }
+
+   @media (max-width:480px) {
+    
+  .header{
+    font-size:10px;
+  }
+
+   }

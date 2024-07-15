@@ -34,63 +34,21 @@ width:60%;
 padding:10px
 }
 
-@media (max-width: 480px) {
+@media (max-width:480px) {
+    .dashContent{
+       font-size: 10px;
+    }
+
     .Container{
-        width:100vw;
-        height:20vh;
-        padding:10px;
-       box-sizing:border-box;
-       display: flex;
-       align-items: center;
-      
+      border-radius: 0;
     }
 
-    .Content{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-    }
-    .dashContent p{
-       display: none;
+    .heading{
+        font-size: 10px;
     }
 
-    .dashContent img{
-        height:25px
-     }
-
-     .Dashboard{
-        display: flex;
-        justify-content: space-between;
-        width: 30vw;
-     
-     }
-     
-     .Dashboard2{
-        display: flex;
-      justify-content: space-between;
-      width:55vw
-     
-     }
-     .heading{
-        padding:0
-    }
-
-     .heading p{
-        display: none
-     }
-     .logout{
-      
-        margin-Top:0
-     }
-
-     .btn{
+    .btn{
        width:100%;
-        padding:0
+        padding: 5px 10px
         }
-
-  
-    
-
 }
-

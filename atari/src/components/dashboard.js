@@ -51,24 +51,24 @@ export default function Dashboard (){
 <div className={styles.Dashboard2}>
 
 
-            <div className={styles.dashContent} style={{...getItemStyle('account') ,display:"flex",alignItems:"center",gap:"10px"}}>
+            <div className={styles.dashContent} style={{...getItemStyle('profile') ,display:"flex",alignItems:"center",gap:"10px"}}>
                 <img src='.\profile.jpg' style={{height:"15px"}}></img>
                 <p   onClick={() => handleSelect('profile')}>Profile</p>
             </div>
 
-            <div className={styles.dashContent} style={{...getItemStyle('account'),display:"flex",alignItems:"center",gap:"10px"}}>
+            <div className={styles.dashContent} style={{...getItemStyle('club'),display:"flex",alignItems:"center",gap:"10px"}}>
                 <img src='.\card.jpg' style={{height:"15px"}}></img>
                 <p  onClick={() => handleSelect('club')}>My Club Card</p>
            
           </div>
 
-          <div className={styles.dashContent} style={{...getItemStyle('account'),display:"flex",alignItems:"center",gap:"10px"  }}>
+          <div className={styles.dashContent} style={{...getItemStyle('connection'),display:"flex",alignItems:"center",gap:"10px"  }}>
                 <img src='.\location.jpg' style={{height:"15px"}}></img>
                 <p  onClick={() => handleSelect('connection')}>Connections</p>
                 </div>
 
                 <div className={styles.logout} >
-                <button className={styles.btn}style={{backgroundColor:"black",color:'white',borderRadius:'10px',width:"60%",padding:"10px"}}>Log out</button>
+                <button className={styles.btn}>Log out</button>
             </div>
 
                 </div>
