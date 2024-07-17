@@ -1,11 +1,12 @@
 import styles from './dashboard.module.css';
 import { useState } from 'react';
 
-export default function Dashboard (){
+export default function Dashboard ({ onOptionClick }){
     const [selected, setSelected] = useState(null);
 
     const handleSelect = (item) => {
         setSelected(item);
+         onOptionClick ();
     };
 
     const getItemStyle = (item) => {

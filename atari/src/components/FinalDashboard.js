@@ -4,6 +4,9 @@ import Account from "./Accounts";
 import Dashboard from "./dashboard";
 import Header from './Header';
 export default function FinalDashboard (){
+    function hideDashboard (){
+        
+    }
     return(
         <>
         <div  className={styles.Container}>
@@ -12,7 +15,7 @@ export default function FinalDashboard (){
 <div>
 <DashboardHeader/>
 <div className={styles.Content} >
-    <Dashboard className ={styles.sidebar}/>
+    <Dashboard onOptionClick={hideDashboard} className ={styles.sidebar}/>
     <Account/>
 </div>
 

@@ -104,7 +104,7 @@ margin-Top:2%
 
 @media (max-width: 480px) {
     .Container{
-        width:100vw;
+        width:100%;
       
         padding:10px;
         background-color: #F2F3F5;
@@ -112,6 +112,10 @@ margin-Top:2%
         height:100vh
        
       
+    }
+
+    .data{
+        font-size: 10px;
     }
 
     .box{
@@ -161,9 +165,6 @@ margin-Top:2%
 .btn{
 width: 21%;
 
-}
-.data{
-    font-size: 12px;
 }
 
 
